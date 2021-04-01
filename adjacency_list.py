@@ -27,16 +27,3 @@ class graph(object):
                 self.A[e[0]].remove(e[1])
                 self.A[e[1]].remove(e[0])
         else: print("element", e, "is not formatted correctly!")
-
-    def get_edges(self):
-        for i in range(1, self.N+1):
-            for j in self.A[i]:
-                print("edge from ", i, "to", j)
-        print("\n")
-
-
-
-G = graph(3, [(1, 2), (2, 3)])
-G.get_edges()
-G.remove_edge((2, 3))
-G.get_edges()
